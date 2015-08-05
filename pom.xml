@@ -60,11 +60,11 @@
 
   <dependencies>
 
-    <dependency>
-      <groupId>org.rapidpm.proxybuilder</groupId>
-      <artifactId>rapidpm-proxybuilder-modules-builder</artifactId>
-      <version>0.0.2-SNAPSHOT</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.rapidpm.proxybuilder</groupId>-->
+      <!--<artifactId>rapidpm-proxybuilder-modules-builder</artifactId>-->
+      <!--<version>0.0.2-SNAPSHOT</version>-->
+    <!--</dependency>-->
 
     <dependency>
       <groupId>org.reflections</groupId>
@@ -87,15 +87,15 @@
 
   <build>
     <plugins>
-      <!-- Generate coveralls reports from Travis 
+      <!-- Generate coveralls reports from Travis -->
       <plugin>
         <groupId>org.eluder.coveralls</groupId>
         <artifactId>coveralls-maven-plugin</artifactId>
         <configuration>
-          <repoToken>xxxxxxx</repoToken>
+          <repoToken>DfTqVzSIiBOsjka6gDl5eVU1tq85r5Olt</repoToken>
         </configuration>
       </plugin>
-      -->
+
     </plugins>
   </build>
 
