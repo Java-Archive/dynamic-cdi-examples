@@ -13,6 +13,7 @@ import org.rapidpm.proxybuilder.type.virtual.ProxyGenerator;
 import org.rapidpm.proxybuilder.type.virtual.ProxyType;
 import org.rapidpm.proxybuilder.type.virtual.dynamic.ServiceStrategyFactoryNotThreadSafe;
 
+
 /**
  * Created by svenruppert on 05.08.15.
  */
