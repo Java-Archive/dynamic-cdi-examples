@@ -10,6 +10,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>rapidpm-dynamic-cdi-examples-modules-example001</artifactId>
+  <dependencies>
+    <dependency>
+      <groupId>org.rapidpm.proxybuilder</groupId>
+      <artifactId>rapidpm-proxybuilder-modules-dynamicobjectadapter-generator-processors</artifactId>
+      <version>0.0.2-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.rapidpm.proxybuilder</groupId>
+      <artifactId>rapidpm-proxybuilder-modules-dynamicobjectadapter-generator-annotations</artifactId>
+      <version>0.0.2-SNAPSHOT</version>
+      <optional>true</optional>
+    </dependency>
+  </dependencies>
 
 
 </project>
