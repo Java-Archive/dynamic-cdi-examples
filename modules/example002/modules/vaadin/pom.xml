@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.rapidpm.dynamic-cdi</groupId>
     <artifactId>rapidpm-dynamic-cdi-examples-modules-example002-modules</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
   </parent>
 
   <artifactId>rapidpm-dynamic-cdi-examples-modules-example002-modules-vaadin</artifactId>
@@ -22,23 +22,6 @@
     <project.target.version>1.8</project.target.version>
     <project.encoding>UTF-8</project.encoding>
   </properties>
-
-  <!--<repositories>-->
-  <!--<repository>-->
-  <!--<id>vaadin-addons</id>-->
-  <!--<url>http://maven.vaadin.com/vaadin-addons</url>-->
-  <!--</repository>-->
-  <!--<repository>-->
-  <!--<id>vaadin-snapshots</id>-->
-  <!--<url>https://oss.sonatype.org/content/repositories/vaadin-snapshots/</url>-->
-  <!--<releases>-->
-  <!--<enabled>false</enabled>-->
-  <!--</releases>-->
-  <!--<snapshots>-->
-  <!--<enabled>true</enabled>-->
-  <!--</snapshots>-->
-  <!--</repository>-->
-  <!--</repositories>-->
 
   <dependencyManagement>
     <dependencies>
@@ -65,18 +48,15 @@
     <dependency>
       <groupId>org.rapidpm.dynamic-cdi</groupId>
       <artifactId>rapidpm-dynamic-cdi</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
     </dependency>
     <!--using Annotation Processing-->
     <dependency>
       <groupId>org.rapidpm.proxybuilder</groupId>
       <artifactId>rapidpm-proxybuilder-modules-dynamicobjectadapter-generator-processors</artifactId>
-      <version>0.0.2-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.rapidpm.proxybuilder</groupId>
       <artifactId>rapidpm-proxybuilder-modules-dynamicobjectadapter-generator-annotations</artifactId>
-      <version>0.0.2-SNAPSHOT</version>
       <!--<optional>true</optional>-->
     </dependency>
     <!--using Annotation Processing-->
@@ -85,7 +65,7 @@
     <dependency>
       <groupId>org.rapidpm.dynamic-cdi</groupId>
       <artifactId>rapidpm-dynamic-cdi-examples-modules-example002-modules-business</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>${project.parent.version}</version>
     </dependency>
 
     <!--added be Sven-->
