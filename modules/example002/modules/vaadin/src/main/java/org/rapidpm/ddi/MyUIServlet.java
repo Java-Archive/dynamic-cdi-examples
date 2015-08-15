@@ -15,5 +15,6 @@ public class MyUIServlet extends VaadinServlet {
 
   public MyUIServlet() {
     System.out.println("MyUIServlet - LocalDateTime.now() = " + LocalDateTime.now());
+
   }
 }

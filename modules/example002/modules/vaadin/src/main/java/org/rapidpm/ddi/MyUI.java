@@ -3,11 +3,16 @@ package org.rapidpm.ddi;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.VaadinRequest;
+import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
+import org.rapidpm.ddi.reflections.ReflectionsModel;
 import org.rapidpm.ddi.service.Service;
+import org.reflections.util.ClasspathHelper;
 
 import javax.inject.Inject;
+import java.net.URL;
 import java.time.LocalDateTime;
+import java.util.Collection;
 
 /**
  *
@@ -30,11 +35,18 @@ public class MyUI extends UI {
 
   @Override
   protected void init(VaadinRequest vaadinRequest) {
+    final Collection<URL> urlsWebInfLib = ClasspathHelper.forWebInfLib(VaadinServlet.getCurrent().getServletContext());
 
-//    DI.addNewClassLoaderAndMerge(Service.class.getClassLoader());
+    for (URL url : urlsWebInfLib) {
+      System.out.println("url = " + url);
+    }
+    final URL webInfClasses = ClasspathHelper.forWebInfClasses(VaadinServlet.getCurrent().getServletContext());
+
+
+    DI.activatePackages("org.rapidpm", urlsWebInfLib);
 
     //inject
-    DI.getInstance().activateDI(this);
+    DI.activateDI(this);
 
     final VerticalLayout layout = new VerticalLayout();
     layout.setMargin(true);

@@ -39,11 +39,11 @@
 
 
     <!--added be Sven-->
-    <dependency>
-      <groupId>org.stagemonitor</groupId>
-      <artifactId>stagemonitor-web</artifactId>
-      <version>0.16.2</version>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.stagemonitor</groupId>-->
+      <!--<artifactId>stagemonitor-web</artifactId>-->
+      <!--<version>0.16.2</version>-->
+    <!--</dependency>-->
 
     <dependency>
       <groupId>org.rapidpm.dynamic-cdi</groupId>
