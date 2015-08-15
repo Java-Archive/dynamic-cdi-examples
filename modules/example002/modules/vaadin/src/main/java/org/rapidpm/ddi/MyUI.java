@@ -3,16 +3,16 @@ package org.rapidpm.ddi;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinServlet;
-import com.vaadin.ui.*;
-import org.rapidpm.ddi.reflections.ReflectionsModel;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.UI;
+import com.vaadin.ui.VerticalLayout;
 import org.rapidpm.ddi.service.Service;
-import org.reflections.util.ClasspathHelper;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
-import java.net.URL;
 import java.time.LocalDateTime;
-import java.util.Collection;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  *
@@ -21,41 +21,45 @@ import java.util.Collection;
 @Widgetset("org.rapidpm.ddi.MyAppWidgetset")
 public class MyUI extends UI {
 
-  public MyUI() {
-    System.out.println("MyUI() - LocalDateTime.now() = " + LocalDateTime.now());
-  }
 
-  public MyUI(final Component content) {
-    super(content);
-    System.out.println("MyUI(content) - LocalDateTime.now() = " + LocalDateTime.now());
-  }
-
+  private static final AtomicInteger COUNTER = new AtomicInteger(0);
+  private int clickCount;
 
   @Inject Service service;
 
+  public Button button;
+  public Label label;
+
   @Override
   protected void init(VaadinRequest vaadinRequest) {
-    final Collection<URL> urlsWebInfLib = ClasspathHelper.forWebInfLib(VaadinServlet.getCurrent().getServletContext());
 
-    for (URL url : urlsWebInfLib) {
-      System.out.println("url = " + url);
-    }
-    final URL webInfClasses = ClasspathHelper.forWebInfClasses(VaadinServlet.getCurrent().getServletContext());
+  }
 
 
-    DI.activatePackages("org.rapidpm", urlsWebInfLib);
-
-    //inject
-    DI.activateDI(this);
+  @PostConstruct
+  public void initialize() {
+    System.out.println("MyUI.initialize = " + LocalDateTime.now());
+    COUNTER.incrementAndGet();
+    clickCount = 0;
 
     final VerticalLayout layout = new VerticalLayout();
     layout.setMargin(true);
     setContent(layout);
 
-    Button button = new Button("Click Me");
-    button.addClickListener(event -> layout.addComponent(new Label("Thank you for clicking " + service.doWork())));
+    label = new Label("here is a label");
+    button = new Button("Click Me");
+    button.addClickListener(event -> label.setValue("Thank you for clicking " + service.doWork()));
     layout.addComponent(button);
+    layout.addComponent(label);
+  }
 
+
+  public static int getNumberOfInstances() {
+    return COUNTER.get();
+  }
+
+  public static void resetCounter() {
+    COUNTER.set(0);
   }
 
 }

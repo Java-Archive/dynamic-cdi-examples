@@ -25,13 +25,29 @@
 
   <dependencyManagement>
     <dependencies>
+      <!--<dependency>-->
+        <!--<groupId>com.vaadin</groupId>-->
+        <!--<artifactId>vaadin-bom</artifactId>-->
+        <!--<version>${vaadin.version}</version>-->
+        <!--<type>pom</type>-->
+        <!--<scope>import</scope>-->
+      <!--</dependency>-->
+
       <dependency>
-        <groupId>com.vaadin</groupId>
-        <artifactId>vaadin-bom</artifactId>
-        <version>${vaadin.version}</version>
+        <groupId>org.jboss.arquillian</groupId>
+        <artifactId>arquillian-bom</artifactId>
+        <version>1.1.8.Final</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+      <dependency>
+        <groupId>org.jboss.arquillian.selenium</groupId>
+        <artifactId>selenium-bom</artifactId>
+        <version>2.43.1</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+
     </dependencies>
   </dependencyManagement>
 
@@ -39,11 +55,11 @@
 
 
     <!--added be Sven-->
-    <!--<dependency>-->
-      <!--<groupId>org.stagemonitor</groupId>-->
-      <!--<artifactId>stagemonitor-web</artifactId>-->
-      <!--<version>0.16.2</version>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>org.stagemonitor</groupId>
+      <artifactId>stagemonitor-web</artifactId>
+      <version>0.16.2</version>
+    </dependency>
 
     <dependency>
       <groupId>org.rapidpm.dynamic-cdi</groupId>
@@ -68,7 +84,44 @@
       <version>${project.parent.version}</version>
     </dependency>
 
+
+
+
+    <!-- Test dependencies -->
+    <!-- Arquillian -->
+    <dependency>
+      <groupId>org.jboss.arquillian.junit</groupId>
+      <artifactId>arquillian-junit-container</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.shrinkwrap.resolver</groupId>
+      <artifactId>shrinkwrap-resolver-impl-maven</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- Graphene -->
+    <dependency>
+      <groupId>org.jboss.arquillian.graphene</groupId>
+      <artifactId>arquillian-graphene</artifactId>
+      <type>pom</type>
+      <version>2.0.3.Final</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.mortbay.jetty</groupId>
+          <artifactId>servlet-api-2.5</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+
+
+
+
     <!--added be Sven-->
+
+
+
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
@@ -78,16 +131,17 @@
     <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-server</artifactId>
+      <version>${vaadin.version}</version>
     </dependency>
-    <dependency>
-      <groupId>com.vaadin</groupId>
-      <artifactId>vaadin-push</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.vaadin</groupId>
-      <artifactId>vaadin-client</artifactId>
-      <scope>provided</scope>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>com.vaadin</groupId>-->
+      <!--<artifactId>vaadin-push</artifactId>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>com.vaadin</groupId>-->
+      <!--<artifactId>vaadin-client</artifactId>-->
+      <!--<scope>provided</scope>-->
+    <!--</dependency>-->
     <!--
 		  Needed when using the widgetset optimizer (custom ConnectorBundleLoaderFactory).
 		  
@@ -105,6 +159,7 @@
     <dependency>
       <groupId>com.vaadin</groupId>
       <artifactId>vaadin-themes</artifactId>
+      <version>${vaadin.version}</version>
     </dependency>
   </dependencies>
 
@@ -259,4 +314,24 @@
 
   </build>
 
+
+
+
+  <profiles>
+    <profile>
+      <id>tomcat8</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <dependencies>
+        <!-- Embedded Tomcat 8 -->
+        <dependency>
+          <groupId>org.jboss.arquillian.container</groupId>
+          <artifactId>arquillian-tomcat-embedded-8</artifactId>
+          <version>1.0.0.CR7</version>
+          <scope>test</scope>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
 </project>
