@@ -21,12 +21,11 @@ public class EditPaneController {
 
   @FXML Button btn;
   @FXML Label lb;
+  private int counter = 0;
 
   public EditPaneController() {
     System.out.println("EditPaneController created " + LocalDateTime.now());
   }
-
-  private int counter = 0;
 
   public void onDoSomething(ActionEvent actionEvent) {
     btn.setText("Edit pressed " + counter);

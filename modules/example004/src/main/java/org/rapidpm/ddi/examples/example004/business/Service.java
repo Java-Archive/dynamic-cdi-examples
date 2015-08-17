@@ -5,5 +5,6 @@ package org.rapidpm.ddi.examples.example004.business;
  */
 public interface Service {
   String calculate();
+
   String getTimeStamp();
 }

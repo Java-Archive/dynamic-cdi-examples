@@ -11,5 +11,6 @@ import java.time.LocalDateTime;
 @DynamicObjectAdapterBuilder
 public interface TimeStampService {
   String createTimeStamp();
+
   LocalDateTime convertTimeStamp(String timstamp);
 }

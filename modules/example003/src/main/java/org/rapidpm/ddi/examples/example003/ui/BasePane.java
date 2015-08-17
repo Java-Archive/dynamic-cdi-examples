@@ -1,12 +1,10 @@
 package org.rapidpm.ddi.examples.example003.ui;
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import org.rapidpm.ddi.DI;
 
 import java.io.IOException;
-import java.lang.reflect.Field;
 import java.net.URL;
 
 /**

@@ -15,12 +15,11 @@ public class MainPaneController {
 
   @FXML Button btn;
   @FXML EditPane editPane;
+  private int counter = 0;
 
   public MainPaneController() {
     System.out.println("MainPaneController created = " + LocalDateTime.now());
   }
-
-  private int counter = 0;
 
   public void onDoSomething(ActionEvent actionEvent) {
     btn.setText("Main pressed " + counter);

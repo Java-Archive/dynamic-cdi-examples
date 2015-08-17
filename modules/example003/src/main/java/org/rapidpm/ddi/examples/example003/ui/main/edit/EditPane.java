@@ -11,14 +11,15 @@ import java.time.LocalDateTime;
  */
 public class EditPane extends BasePane<EditPaneController> {
 
-  public EditPane(){ }
+  public EditPane() {
+  }
 
-  public void setLabelText(){
+  public void setLabelText() {
     controller.useService();
   }
 
   @PostConstruct
-  public void postContruct(){
+  public void postContruct() {
     System.out.println("EditPane constructed = " + LocalDateTime.now());
   }
 }

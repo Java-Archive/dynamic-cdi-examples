@@ -12,12 +12,11 @@ import java.time.LocalDateTime;
 public class ServiceImpl implements Service {
 
   @Inject @Proxy(virtual = true) TimeStampService timeStampService;
+  private int counter = 0;
 
   public ServiceImpl() {
     System.out.println("ServiceImpl constructed = " + LocalDateTime.now());
   }
-
-  private int counter = 0;
 
   @Override
   public String calculate() {
@@ -28,7 +27,7 @@ public class ServiceImpl implements Service {
   }
 
 
-  public String getTimeStamp(){
+  public String getTimeStamp() {
     return timeStampService.createTimeStamp();
   }
 

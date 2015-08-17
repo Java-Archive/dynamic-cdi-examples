@@ -2,10 +2,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 <?import org.rapidpm.ddi.examples.example004.ui.main.edit.EditPane?>
-<fx:root type="org.rapidpm.ddi.examples.example004.ui.main.MainPane"
+<?import org.rapidpm.ddi.examples.example004.ui.main.MainPane?>
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         type="org.rapidpm.ddi.examples.example004.ui.main.MainPane"
          fx:controller="org.rapidpm.ddi.examples.example004.ui.main.MainPaneController"
-         xmlns:fx="http://javafx.com/fxml"
-         fx:id="mainPane" >
+         fx:id="mainPane">
 
   <!--style="-ui-scale-x: 4; -ui-scale-y: 4"-->
   <VBox>

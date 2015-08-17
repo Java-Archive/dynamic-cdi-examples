@@ -15,16 +15,15 @@ public class MainPaneController {
 
   @FXML Button btn;
   @FXML EditPane editPane;
-
-  public MainPaneController() {
-    System.out.println("MainPaneController created = " + LocalDateTime.now() );
-  }
-
   private int counter = 0;
 
-  public void onDoSomething(ActionEvent actionEvent){
+  public MainPaneController() {
+    System.out.println("MainPaneController created = " + LocalDateTime.now());
+  }
+
+  public void onDoSomething(ActionEvent actionEvent) {
     btn.setText("Main pressed " + counter);
-    counter = counter +1;
+    counter = counter + 1;
 
     //label from Edit changing
     editPane.setLabelText();
@@ -32,7 +31,7 @@ public class MainPaneController {
 
 
   @PostConstruct
-  public void postConstruct(){
+  public void postConstruct() {
     System.out.println("MainPaneController-editPane = " + editPane);
     System.out.println("MainPaneController-btn = " + btn);
   }

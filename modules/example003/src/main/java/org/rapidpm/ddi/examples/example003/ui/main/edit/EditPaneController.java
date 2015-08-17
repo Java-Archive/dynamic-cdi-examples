@@ -21,24 +21,24 @@ public class EditPaneController {
 
   @FXML Button btn;
   @FXML Label lb;
+  private int counter = 0;
 
   public EditPaneController() {
-    System.out.println("EditPaneController created " + LocalDateTime.now() );
+    System.out.println("EditPaneController created " + LocalDateTime.now());
   }
 
-  private int counter = 0;
-  public void onDoSomething(ActionEvent actionEvent){
+  public void onDoSomething(ActionEvent actionEvent) {
     btn.setText("Edit pressed " + counter);
-    counter = counter +1;
+    counter = counter + 1;
   }
 
-  public void useService(){
+  public void useService() {
     lb.setText(service.calculate());
   }
 
 
   @PostConstruct
-  public void postConstruct(){
+  public void postConstruct() {
     System.out.println("EditPaneController-lb = " + lb);
     System.out.println("EditPaneController-btn = " + btn);
   }

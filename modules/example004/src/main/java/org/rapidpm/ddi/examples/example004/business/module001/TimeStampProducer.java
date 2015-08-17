@@ -9,9 +9,9 @@ import java.time.LocalDateTime;
  * Created by svenruppert on 17.08.15.
  */
 @Produces(TimeStampService.class)
-public class TimeStampProducer implements Producer<TimeStampService>{
+public class TimeStampProducer implements Producer<TimeStampService> {
 
-  public TimeStampService create(){
+  public TimeStampService create() {
     System.out.println("TimeStampProducer-create = " + LocalDateTime.now());
     return TimeStampServiceAdapterBuilder.newBuilder()
         .setOriginal(null)

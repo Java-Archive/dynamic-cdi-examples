@@ -11,12 +11,12 @@ import java.time.LocalDateTime;
  */
 public class MainPane extends BasePane<MainPaneController> {
 
-  public MainPane(){
+  public MainPane() {
   }
 
 
   @PostConstruct
-  public void postContruct(){
+  public void postContruct() {
     System.out.println("MainPane constructed = " + LocalDateTime.now());
   }
 }
