@@ -3,29 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <artifactId>rapidpm-dynamic-cdi-examples-modules</artifactId>
     <groupId>org.rapidpm.dynamic-cdi</groupId>
+    <artifactId>rapidpm-dynamic-cdi-examples-modules</artifactId>
     <version>0.0.2-SNAPSHOT</version>
-
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>rapidpm-dynamic-cdi-examples-modules-example001</artifactId>
-
-
-
+  <artifactId>rapidpm-dynamic-cdi-examples-modules-example003</artifactId>
 
 
   <dependencies>
-
-
+    <!--added be Sven-->
     <dependency>
       <groupId>org.rapidpm.dynamic-cdi</groupId>
       <artifactId>rapidpm-dynamic-cdi</artifactId>
     </dependency>
-
-
-  <!--using Annotation Processing-->
+    <!--using Annotation Processing-->
     <dependency>
       <groupId>org.rapidpm.proxybuilder</groupId>
       <artifactId>rapidpm-proxybuilder-modules-dynamicobjectadapter-generator-processors</artifactId>
@@ -33,35 +26,8 @@
     <dependency>
       <groupId>org.rapidpm.proxybuilder</groupId>
       <artifactId>rapidpm-proxybuilder-modules-dynamicobjectadapter-generator-annotations</artifactId>
-      <optional>true</optional>
     </dependency>
     <!--using Annotation Processing-->
-
-
   </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>build-helper-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>add-source</goal>
-              <goal>add-test-source</goal>
-            </goals>
-            <configuration>
-
-              <sources>
-                <source>${project.build.directory}/generated-sources/annotations</source>
-              </sources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>

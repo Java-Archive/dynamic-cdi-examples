@@ -23,7 +23,7 @@ public class ServiceTest004 {
 
   @Before
   public void setUp() throws Exception {
-    DI.getInstance().activateDI(this);
+    DI.activateDI(this);
   }
 
   @Produces(ExternalAdapterInterface.class)

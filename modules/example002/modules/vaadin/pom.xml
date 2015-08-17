@@ -63,29 +63,9 @@
 
     <dependency>
       <groupId>org.rapidpm.dynamic-cdi</groupId>
-      <artifactId>rapidpm-dynamic-cdi</artifactId>
-    </dependency>
-    <!--using Annotation Processing-->
-    <dependency>
-      <groupId>org.rapidpm.proxybuilder</groupId>
-      <artifactId>rapidpm-proxybuilder-modules-dynamicobjectadapter-generator-processors</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.rapidpm.proxybuilder</groupId>
-      <artifactId>rapidpm-proxybuilder-modules-dynamicobjectadapter-generator-annotations</artifactId>
-      <!--<optional>true</optional>-->
-    </dependency>
-    <!--using Annotation Processing-->
-
-
-    <dependency>
-      <groupId>org.rapidpm.dynamic-cdi</groupId>
       <artifactId>rapidpm-dynamic-cdi-examples-modules-example002-modules-business</artifactId>
       <version>${project.parent.version}</version>
     </dependency>
-
-
-
 
     <!-- Test dependencies -->
     <!-- Arquillian -->
@@ -113,11 +93,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-
-
-
-
-
     <!--added be Sven-->
 
 
@@ -313,8 +288,6 @@
     </pluginManagement>
 
   </build>
-
-
 
 
   <profiles>

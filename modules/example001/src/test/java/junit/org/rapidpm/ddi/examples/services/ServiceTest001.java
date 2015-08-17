@@ -15,7 +15,7 @@ public class ServiceTest001 {
 
   @Before
   public void setUp() throws Exception {
-    DI.getInstance().activateDI(this);
+    DI.activateDI(this);
   }
 
   @Inject ServiceImpl instance;

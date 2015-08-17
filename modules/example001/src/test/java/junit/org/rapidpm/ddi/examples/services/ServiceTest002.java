@@ -18,7 +18,7 @@ public class ServiceTest002 {
 
   @Before
   public void setUp() throws Exception {
-    DI.getInstance().activateDI(this);
+    DI.activateDI(this);
   }
 
   @Inject ExternalAdapter externalAdapter;
