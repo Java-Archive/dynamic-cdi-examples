@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  */
 public class ServiceImpl implements Service {
 
-  @Inject @Proxy(virtual = true) TimeStampService timeStampService;
+  @Inject @Proxy(virtual = true, metrics = true) TimeStampService timeStampService;
   private int counter = 0;
 
   public ServiceImpl() {
