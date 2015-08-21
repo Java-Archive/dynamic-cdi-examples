@@ -3,6 +3,7 @@ package org.rapidpm.ddi;
 import com.vaadin.annotations.VaadinServletConfiguration;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 
 /**
@@ -10,12 +11,8 @@ import javax.servlet.annotation.WebServlet;
  */
 @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true, displayName = "Exampl002")
 @VaadinServletConfiguration(ui = MyUI.class, productionMode = false)
+@WebInitParam(name = "Resources", value = "http://virit.in/dawn/11")  //.addInitParam("Resources", "http://virit.in/dawn/11"))
 public class MyUIServlet extends DDIVaadinServlet  {
-
-  public MyUIServlet() {
-    //Metrics - System.out.println("MyUIServlet - LocalDateTime.now() = " + LocalDateTime.now());
-  }
-
   @Override
   protected void servletInitialized() throws ServletException {
     super.servletInitialized();

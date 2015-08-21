@@ -1,7 +1,6 @@
 package org.rapidpm.ddi;
 
 import com.vaadin.annotations.Theme;
-import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Label;
@@ -17,8 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  *
  */
-@Theme("mytheme")
-@Widgetset("org.rapidpm.ddi.MyAppWidgetset")
+@Theme("valo")
 public class MyUI extends UI {
 
 
