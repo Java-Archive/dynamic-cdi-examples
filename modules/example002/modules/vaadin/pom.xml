@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.rapidpm.dynamic-cdi</groupId>
     <artifactId>rapidpm-dynamic-cdi-examples-modules-example002-modules</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
   </parent>
 
   <artifactId>rapidpm-dynamic-cdi-examples-modules-example002-modules-vaadin</artifactId>
