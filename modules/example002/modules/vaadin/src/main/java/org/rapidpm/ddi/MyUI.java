@@ -21,18 +21,23 @@ public class MyUI extends UI {
 
 
   private static final AtomicInteger COUNTER = new AtomicInteger(0);
-  private int clickCount;
-
-  @Inject Service service;
-
   public Button button;
   public Label label;
+  @Inject Service service;
+  private int clickCount;
+
+  public static int getNumberOfInstances() {
+    return COUNTER.get();
+  }
+
+  public static void resetCounter() {
+    COUNTER.set(0);
+  }
 
   @Override
   protected void init(VaadinRequest vaadinRequest) {
 
   }
-
 
   @PostConstruct
   public void initialize() {
@@ -49,15 +54,6 @@ public class MyUI extends UI {
     button.addClickListener(event -> label.setValue("Thank you for clicking " + service.doWork()));
     layout.addComponent(button);
     layout.addComponent(label);
-  }
-
-
-  public static int getNumberOfInstances() {
-    return COUNTER.get();
-  }
-
-  public static void resetCounter() {
-    COUNTER.set(0);
   }
 
 }

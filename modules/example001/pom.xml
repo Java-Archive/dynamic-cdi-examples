@@ -5,15 +5,12 @@
   <parent>
     <artifactId>rapidpm-dynamic-cdi-examples-modules</artifactId>
     <groupId>org.rapidpm.dynamic-cdi</groupId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
 
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>rapidpm-dynamic-cdi-examples-modules-example001</artifactId>
-
-
-
 
 
   <dependencies>
@@ -25,7 +22,7 @@
     </dependency>
 
 
-  <!--using Annotation Processing-->
+    <!--using Annotation Processing-->
     <dependency>
       <groupId>org.rapidpm.proxybuilder</groupId>
       <artifactId>rapidpm-proxybuilder-modules-dynamicobjectadapter-generator-processors</artifactId>

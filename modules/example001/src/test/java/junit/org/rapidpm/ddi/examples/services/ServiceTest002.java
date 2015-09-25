@@ -16,12 +16,12 @@ import javax.inject.Inject;
 public class ServiceTest002 {
 
 
+  @Inject ExternalAdapter externalAdapter;
+
   @Before
   public void setUp() throws Exception {
     DI.activateDI(this);
   }
-
-  @Inject ExternalAdapter externalAdapter;
 
   @Test
   public void test001() throws Exception {
@@ -37,9 +37,8 @@ public class ServiceTest002 {
     final String hello = target.workExternal("hello");
     Assert.assertNotNull(hello);
     Assert.assertFalse(hello.isEmpty());
-    Assert.assertEquals("mocked",hello);
+    Assert.assertEquals("mocked", hello);
   }
-
 
 
 }

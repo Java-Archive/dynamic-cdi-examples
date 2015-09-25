@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebServlet;
 @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true, displayName = "Exampl002")
 @VaadinServletConfiguration(ui = MyUI.class, productionMode = false)
 @WebInitParam(name = "Resources", value = "http://virit.in/dawn/11")  //.addInitParam("Resources", "http://virit.in/dawn/11"))
-public class MyUIServlet extends DDIVaadinServlet  {
+public class MyUIServlet extends DDIVaadinServlet {
   @Override
   protected void servletInitialized() throws ServletException {
     super.servletInitialized();

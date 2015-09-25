@@ -14,6 +14,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Main extends Application {
 
+  private ConsoleReporter reporter;
+
   public static void main(String[] args) {
     DI.activatePackages("org.rapidpm"); // speed up startup
     launch(args);
@@ -29,9 +31,6 @@ public class Main extends Application {
     primaryStage.setScene(new Scene(root, 300, 275));
     primaryStage.show();
   }
-
-
-  private ConsoleReporter reporter;
 
   private void startMetrics() {
     final MetricRegistry metrics = MetricsRegistry.getInstance().getMetrics();

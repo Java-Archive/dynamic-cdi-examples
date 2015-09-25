@@ -1,7 +1,6 @@
 package org.rapidpm.ddi.examples.services;
 
 
-
 import org.rapidpm.ddi.examples.services.adapter.ExternalAdapterInterface;
 
 import javax.inject.Inject;
@@ -9,7 +8,7 @@ import javax.inject.Inject;
 /**
  * Created by svenruppert on 05.08.15.
  */
-public class ServiceImpl implements Service  {
+public class ServiceImpl implements Service {
 
 
   @Inject ExternalAdapterInterface adapterInterface;

@@ -13,12 +13,12 @@ import javax.inject.Inject;
  */
 public class ServiceTest001 {
 
+  @Inject ServiceImpl instance;
+
   @Before
   public void setUp() throws Exception {
     DI.activateDI(this);
   }
-
-  @Inject ServiceImpl instance;
 
   @Test
   public void test001() throws Exception {

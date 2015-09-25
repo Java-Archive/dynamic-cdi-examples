@@ -16,16 +16,16 @@ public class DDIVaadinServlet extends VaadinServlet {
   //add Metrics here
 
   @Override
+  protected void servletInitialized() throws ServletException {
+    super.servletInitialized();
+
+  }
+
+  @Override
   protected VaadinServletService createServletService(final DeploymentConfiguration deploymentConfiguration) throws ServiceException {
     final DDIVaadinServletService service = new DDIVaadinServletService(this, deploymentConfiguration);
     service.init();
     return service;
-  }
-
-  @Override
-  protected void servletInitialized() throws ServletException {
-    super.servletInitialized();
-
   }
 
 }

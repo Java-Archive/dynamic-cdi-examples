@@ -21,16 +21,27 @@ import javax.inject.Produces;
  */
 public class ServiceTest004 {
 
+  @Inject ExternalAdapterInterface targetPRoxy;
+
   @Before
   public void setUp() throws Exception {
     DI.activateDI(this);
+  }
+
+  @Test
+  public void test001() throws Exception {
+    Assert.assertNotNull(targetPRoxy);
+    final String hello = targetPRoxy.workExternal("hello");
+    Assert.assertNotNull(hello);
+    Assert.assertFalse(hello.isEmpty());
+    Assert.assertEquals("hello_external", hello);
   }
 
   @Produces(ExternalAdapterInterface.class)
   public static class ExternalAdapterInterfaceProducer implements Producer<ExternalAdapterInterface> {
     @Override
     public ExternalAdapterInterface create() {
-      return  ProxyGenerator.<ExternalAdapterInterface, ExternalAdapter>newBuilder()
+      return ProxyGenerator.<ExternalAdapterInterface, ExternalAdapter>newBuilder()
           .withSubject(ExternalAdapterInterface.class).withRealClass(ExternalAdapter.class)
           .withType(ProxyType.DYNAMIC)
           .withConcurrency(Concurrency.NONE)
@@ -39,16 +50,5 @@ public class ServiceTest004 {
           .build()
           .make();
     }
-  }
-
-  @Inject ExternalAdapterInterface targetPRoxy;
-
-  @Test
-  public void test001() throws Exception {
-    Assert.assertNotNull(targetPRoxy);
-    final String hello = targetPRoxy.workExternal("hello");
-    Assert.assertNotNull(hello);
-    Assert.assertFalse(hello.isEmpty());
-    Assert.assertEquals("hello_external",hello);
   }
 }

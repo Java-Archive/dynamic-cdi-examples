@@ -25,6 +25,6 @@ public class ServiceTest003 {
     final String hello = target.workExternal("hello");
     Assert.assertNotNull(hello);
     Assert.assertFalse(hello.isEmpty());
-    Assert.assertEquals("mocked",hello);
+    Assert.assertEquals("mocked", hello);
   }
 }

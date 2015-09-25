@@ -10,11 +10,11 @@ import java.time.LocalDateTime;
  */ //@ExternalClassAdapter
 public class ExternalAdapter implements ExternalAdapterInterface {
 
+  @Inject ExternalService externalService; // geht ohne interface nicht mit dynmaschen proxies
+
   public ExternalAdapter() {
     System.out.println("ExternalAdapter.now() = " + LocalDateTime.now());
   }
-
-  @Inject ExternalService externalService; // geht ohne interface nicht mit dynmaschen proxies
 
   public String workExternal(final String txt) {
     return externalService.workExternal(txt);
