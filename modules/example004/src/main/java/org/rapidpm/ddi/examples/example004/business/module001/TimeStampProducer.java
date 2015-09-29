@@ -2,7 +2,7 @@ package org.rapidpm.ddi.examples.example004.business.module001;
 
 import org.rapidpm.ddi.producer.Producer;
 
-import javax.inject.Produces;
+import org.rapidpm.ddi.Produces;
 import java.time.LocalDateTime;
 
 /**

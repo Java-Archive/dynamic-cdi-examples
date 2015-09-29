@@ -14,7 +14,7 @@ import org.rapidpm.proxybuilder.type.virtual.ProxyType;
 import org.rapidpm.proxybuilder.type.virtual.dynamic.ServiceStrategyFactoryNotThreadSafe;
 
 import javax.inject.Inject;
-import javax.inject.Produces;
+import org.rapidpm.ddi.Produces;
 
 /**
  * Created by svenruppert on 07.08.15.
