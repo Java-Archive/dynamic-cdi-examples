@@ -1,6 +1,7 @@
 package org.rapidpm.ddi.examples.example004.business.module001;
 
-import org.rapidpm.proxybuilder.dynamicobjectadapter.DynamicObjectAdapterBuilder;
+
+import org.rapidpm.proxybuilder.objectadapter.annotations.dynamicobjectadapter.DynamicObjectAdapterBuilder;
 
 import java.time.LocalDateTime;
 
