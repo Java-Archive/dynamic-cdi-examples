@@ -8,10 +8,10 @@ import org.rapidpm.ddi.DI;
 import org.rapidpm.ddi.examples.services.adapter.ExternalAdapter;
 import org.rapidpm.ddi.examples.services.adapter.ExternalAdapterInterface;
 import org.rapidpm.ddi.producer.Producer;
-import org.rapidpm.proxybuilder.type.virtual.Concurrency;
+import org.rapidpm.proxybuilder.type.virtual.CreationStrategy;
 import org.rapidpm.proxybuilder.type.virtual.ProxyGenerator;
 import org.rapidpm.proxybuilder.type.virtual.ProxyType;
-import org.rapidpm.proxybuilder.type.virtual.dynamic.ServiceStrategyFactoryNotThreadSafe;
+import org.rapidpm.proxybuilder.type.virtual.dynamic.creationstrategy.ServiceStrategyFactoryNotThreadSafe;
 
 import javax.inject.Inject;
 import org.rapidpm.ddi.Produces;
@@ -44,7 +44,7 @@ public class ServiceTest004 {
       return ProxyGenerator.<ExternalAdapterInterface, ExternalAdapter>newBuilder()
           .withSubject(ExternalAdapterInterface.class).withRealClass(ExternalAdapter.class)
           .withType(ProxyType.DYNAMIC)
-          .withConcurrency(Concurrency.NONE)
+          .withConcurrency(CreationStrategy.NONE)
           .withServiceFactory(new DDIServiceFactory<>(ExternalAdapter.class))
           .withServiceStrategyFactory(new ServiceStrategyFactoryNotThreadSafe<>())
           .build()
