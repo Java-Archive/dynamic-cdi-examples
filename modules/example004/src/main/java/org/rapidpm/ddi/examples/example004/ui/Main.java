@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.rapidpm.ddi.DI;
 import org.rapidpm.ddi.examples.example004.ui.main.MainPane;
-import org.rapidpm.proxybuilder.type.metrics.MetricsRegistry;
+import org.rapidpm.proxybuilder.type.dymamic.metrics.MetricsRegistry;
 
 import java.util.concurrent.TimeUnit;
 
