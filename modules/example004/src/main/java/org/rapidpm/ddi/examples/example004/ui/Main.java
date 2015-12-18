@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.rapidpm.ddi.DI;
 import org.rapidpm.ddi.examples.example004.ui.main.MainPane;
-import org.rapidpm.proxybuilder.type.dymamic.metrics.MetricsRegistry;
+import org.rapidpm.proxybuilder.core.metrics.RapidPMMetricsRegistry;
 
 import java.util.concurrent.TimeUnit;
 
@@ -33,7 +33,7 @@ public class Main extends Application {
   }
 
   private void startMetrics() {
-    final MetricRegistry metrics = MetricsRegistry.getInstance().getMetrics();
+    final MetricRegistry metrics = RapidPMMetricsRegistry.getInstance().getMetrics();
     reporter = ConsoleReporter.forRegistry(metrics)
         .convertRatesTo(TimeUnit.NANOSECONDS)
         .convertDurationsTo(TimeUnit.MILLISECONDS)
