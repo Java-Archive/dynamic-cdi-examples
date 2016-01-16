@@ -8,7 +8,7 @@ import com.vaadin.server.VaadinServletService;
 import javax.servlet.ServletException;
 
 /**
- * Created by svenruppert on 15.08.15.
+ * Created by Sven Ruppert on 15.08.15.
  */
 public class DDIVaadinServlet extends VaadinServlet {
 

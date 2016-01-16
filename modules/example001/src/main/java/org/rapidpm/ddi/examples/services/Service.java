@@ -4,7 +4,7 @@ package org.rapidpm.ddi.examples.services;
 import org.rapidpm.proxybuilder.objectadapter.annotations.dynamicobjectadapter.DynamicObjectAdapterBuilder;
 
 /**
- * Created by svenruppert on 05.08.15.
+ * Created by Sven Ruppert on 05.08.15.
  */
 @DynamicObjectAdapterBuilder
 public interface Service {

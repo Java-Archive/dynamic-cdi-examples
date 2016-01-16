@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 
 /**
- * Created by svenruppert on 15.08.15.
+ * Created by Sven Ruppert on 15.08.15.
  */
 public class DDIVaadinServletService extends VaadinServletService {
 

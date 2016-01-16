@@ -6,7 +6,7 @@ import org.rapidpm.ddi.examples.services.adapter.ExternalAdapterInterface;
 import javax.inject.Inject;
 
 /**
- * Created by svenruppert on 05.08.15.
+ * Created by Sven Ruppert on 05.08.15.
  */
 public class ServiceImpl implements Service {
 

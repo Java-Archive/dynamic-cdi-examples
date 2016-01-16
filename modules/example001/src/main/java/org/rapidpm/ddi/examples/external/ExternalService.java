@@ -3,7 +3,7 @@ package org.rapidpm.ddi.examples.external;
 import java.time.LocalDateTime;
 
 /**
- * Created by svenruppert on 05.08.15.
+ * Created by Sven Ruppert on 05.08.15.
  */
 public class ExternalService {
 

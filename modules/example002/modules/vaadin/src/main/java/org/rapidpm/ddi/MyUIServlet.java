@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 
 /**
- * Created by svenruppert on 11.08.15.
+ * Created by Sven Ruppert on 11.08.15.
  */
 @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true, displayName = "Exampl002")
 @VaadinServletConfiguration(ui = MyUI.class, productionMode = false)
