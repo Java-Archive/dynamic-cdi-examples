@@ -46,7 +46,7 @@ public class DDIVaadinServletService extends VaadinServletService {
       @Override
       public UI createInstance(final UICreateEvent event) {
         final UI instance = super.createInstance(event);
-        //metrics - System.out.println("DDIVaadinServletService.createInstance-instance = " + instance);
+        //metrics - System.out.println("DDIVaadinServletService.getInstance-instance = " + instance);
         return DI.activateDI(instance);
       }
     }));
