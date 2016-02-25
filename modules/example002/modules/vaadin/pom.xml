@@ -24,7 +24,7 @@
   <parent>
     <groupId>org.rapidpm.dynamic-cdi</groupId>
     <artifactId>rapidpm-dynamic-cdi-examples-modules-example002-modules</artifactId>
-    <version>0.0.7</version>
+    <version>0.1.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>rapidpm-dynamic-cdi-examples-modules-example002-modules-vaadin</artifactId>
