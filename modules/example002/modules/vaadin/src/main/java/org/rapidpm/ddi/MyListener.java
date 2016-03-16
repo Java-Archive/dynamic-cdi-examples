@@ -19,8 +19,10 @@
 
 package org.rapidpm.ddi;
 
+import com.vaadin.wscdn.WidgetSet;
+
 import javax.servlet.annotation.WebListener;
 
 @WebListener
-public class MyListener extends in.virit.WidgetSet {
+public class MyListener extends WidgetSet {
 }
