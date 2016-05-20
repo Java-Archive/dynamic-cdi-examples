@@ -33,6 +33,9 @@ public class ServiceTest001 {
 
   @Before
   public void setUp() throws Exception {
+    DI.clearReflectionModel();
+    DI.activatePackages("org.rapidpm");
+    DI.activatePackages(this.getClass());
     DI.activateDI(this);
   }
 
