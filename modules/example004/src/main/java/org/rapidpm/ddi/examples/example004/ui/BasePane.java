@@ -22,12 +22,15 @@ package org.rapidpm.ddi.examples.example004.ui;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import org.rapidpm.ddi.DI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.URL;
 
 public class BasePane<T> extends AnchorPane {
 
+  private static final Logger logger = LoggerFactory.getLogger(BasePane.class);
   public T controller;
 
   public BasePane() {
@@ -51,7 +54,7 @@ public class BasePane<T> extends AnchorPane {
     try {
       loader.load();
     } catch (IOException e) {
-      e.printStackTrace();
+      logger.error("failed to load fxml ", e);
     }
     return loader;
   }
