@@ -30,7 +30,7 @@ import java.net.URL;
 
 public class BasePane<T> extends AnchorPane {
 
-  private static final Logger logger = LoggerFactory.getLogger(BasePane.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(BasePane.class);
   public T controller;
 
   public BasePane() {
@@ -54,7 +54,7 @@ public class BasePane<T> extends AnchorPane {
     try {
       loader.load();
     } catch (IOException e) {
-      logger.error("failed to load fxml ", e);
+      LOGGER.error("failed to load fxml ", e);
     }
     return loader;
   }
